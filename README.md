@@ -1,31 +1,27 @@
-Battery State of Charge (SoC) Estimation Using Machine Learning
+Battery State of Charge (SoC) & State of Health (SoH) Estimation Using Machine Learning
 
 Project Overview
+This project develops a data-driven pipeline to estimate the State of Charge (SoC) and State of Health (SoH) of lithium-ion batteries. It combines experimental datasets—including fresh and aged cells, NASA’s public data, and Mendeley’s EIS dataset—with advanced feature engineering and machine learning models for accurate prediction of battery health metrics.
 
-This project implements battery State of Charge (SoC) estimation using advanced machine learning techniques. The aim is to develop robust predictive models that estimate the SoC of lithium-ion battery cells based on available electrical measurements like voltage, current, and temperature, along with extracted electrochemical impedance spectroscopy (EIS) features when applicable.
+The pipeline leverages voltage, current, temperature, internal resistance, and the Open Circuit Voltage (OCV) vs. SoC curve to enhance prediction robustness.
 
-You will find a complete pipeline from data loading, feature engineering, model training, validation, and visualization. The project covers datasets from publicly available benchmark sources such as the NASA Battery Dataset and the Mendeley Battery Dataset, along with custom experimental fresh and aged cell data.
+Key Features
+* Multi-Dataset Integration: Processes diverse battery datasets for comprehensive analysis.
 
-Key Features:
+* Advanced Feature Engineering: Includes derivatives, power calculations, internal resistance smoothing, and OCV-based SoC initialization.
 
- 1. Efficient data loading and preprocessing for multiple battery datasets (NASA, Mendeley, custom experimental data).
+* Machine Learning Models: Implements Random Forest, Gradient Boosting, Linear Regression, and Decision Trees, with Random Forest showing top performance for SOH.
 
- 2. Robust feature engineering including voltage, current, temperature, and electrochemical impedance features.
+* Data Exploration & Visualization: Extensive plots including time-series, scatter, distribution, residuals, and feature importance.
 
- 3. Machine learning modeling using proven regressors like Random Forest and Gradient Boosting for SoC estimation.
+* Modular and Reproducible: Clear step-by-step code for easy reproduction and extension.
 
- 4. Model evaluation and visualization with cross-validation metrics and actual vs predicted SoC plots.
+Usage
+* Clone the repo and install dependencies.
 
- 5. Modular and extensible pipeline for easy adaptation to new datasets or extension to SoH estimation.
+* Prepare dataset directories and update paths.
 
+* Run notebooks or scripts for SoC/SOH estimation.
 
-Results:
-
-* Achieved competitive SoC estimation errors (CV RMSE ~0.02-0.03), demonstrating strong model performance.
-
-* Gradient Boosting Regressor consistently outperformed Random Forest and Linear Regression in cross-validation tests.
-
-* Visualizations and residual analyses help fine-tune models further.
-
-
+* Analyze visualizations and model performance metrics.
 
